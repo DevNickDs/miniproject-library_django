@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+{% block title %} List of Authors {% endblock title %}
+{% block body %}
+    {% if authors %}
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Last Name</th>
+                    <th>Nationality</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for author in authors %}
+                    <tr>
+                        <td>{{ author.id }}</td>
+                        <td>{{ author.name }}</td>
+                        <td>{{ author.last_name }}</td>
+                        <td>{{ author.nationality }}</td>
+                        <td>{{ author.description }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <h1>Doesn't exist</h1>
+    {% endif %}
+{% endblock body %}

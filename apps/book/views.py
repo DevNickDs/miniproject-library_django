@@ -21,4 +21,4 @@ def create_author(request):
 
 def list_authors(request):
     authors = Author.objects.all()
-    return render(request, 'book/list_authors', {'authors': authors})
+    return render(request, 'book/list_authors.html', {'authors': authors})
