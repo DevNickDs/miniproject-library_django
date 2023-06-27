@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% block title %} Create Author {% endblock title %}
+{% block body %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ author_form.as_p }}
+        <button type="submit">Create</button>
+    </form>
+{% endblock body %}
