@@ -7,6 +7,7 @@ class Author(models.Model):
     last_name = models.CharField(max_length=150, blank=False, null=False)
     nationality = models.CharField(max_length=50, blank=False, null=False)
     description = models.TextField(blank=True, null=True)
+    state = models.BooleanField('State', default=True)
     created_date = models.DateField(('Created date'), auto_now=True, auto_now_add=False)
     
     class Meta:

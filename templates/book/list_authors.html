@@ -10,6 +10,7 @@
                     <th>Last Name</th>
                     <th>Nationality</th>
                     <th>Description</th>
+                    <th>Options</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +21,10 @@
                         <td>{{ author.last_name }}</td>
                         <td>{{ author.nationality }}</td>
                         <td>{{ author.description }}</td>
+                        <td>
+                            <a href="{% url 'book:edit_author' author.id %}">Edit</a>
+                            <a href="{% url 'book:delete_author' author.id %}">Delete</a>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>

@@ -20,6 +20,6 @@ from apps.book.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('book/', include('apps.book.urls')),
+    path('book/', include('apps.book.urls', namespace='book')),
     path('home/', home, name='Home'),
 ]
