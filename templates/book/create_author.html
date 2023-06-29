@@ -6,8 +6,9 @@
         {% if error %}
             <h2>{{ error }}</h2>
         {% else %}
-            {{ author_form.as_p }}
-            <button type="submit">Create</button>
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+            <a href="{% url 'book:list_authors' %}">Cancel</a>
         {% endif %}
     </form>
 {% endblock body %}
